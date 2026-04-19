@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { FiArrowUpRight, FiArrowDownRight, FiActivity, FiCreditCard } from 'react-icons/fi';
-import { getDashboard } from '../services/api';
 
 const MOCK_DATA = [
   { name: 'Jan', income: 4000, spend: 2400 },
@@ -15,25 +14,6 @@ const MOCK_DATA = [
 ];
 
 export default function DashboardV2() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // In a real app, this fetches real data
-    getDashboard().then(d => {
-      setData(d);
-      setLoading(false);
-    }).catch(() => setLoading(false));
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="w-12 h-12 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin" />
-      </div>
-    );
-  }
-
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
