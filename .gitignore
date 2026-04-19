@@ -1,5 +1,4 @@
 node_modules/
-venv/
 __pycache__/
 *.pyc
 .env
@@ -10,3 +9,4 @@ dist/
 finpersona.db
 finpersona.db-shm
 finpersona.db-wal
+\venv
