@@ -87,8 +87,6 @@ const DEMO_TRANSACTIONS = (() => {
   return txns;
 })();
 
-const fmt = (n) => n ? Number(n).toLocaleString("en-IN", { maximumFractionDigits: 0 }) : "0";
-
 const STAT_CONFIG = [
   { key: "total_income", label: "Total Income", prefix: "₹", color: "#10b981", glow: "rgba(16,185,129,0.3)", icon: "💰", gradient: "linear-gradient(135deg,rgba(16,185,129,0.15),rgba(16,185,129,0.03))" },
   { key: "total_spent",  label: "Total Spent",  prefix: "₹", color: "#ef4444", glow: "rgba(239,68,68,0.3)",   icon: "💸", gradient: "linear-gradient(135deg,rgba(239,68,68,0.15),rgba(239,68,68,0.03))" },

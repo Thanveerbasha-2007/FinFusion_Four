@@ -1,6 +1,6 @@
 import React, { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { MeshDistortMaterial, Float, Sparkles, Environment, ContactShadows, Ring } from "@react-three/drei";
+import { MeshDistortMaterial, Float, Sparkles, Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 
 function AnimatedSphere({ score }) {
